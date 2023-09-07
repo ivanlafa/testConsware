@@ -8,3 +8,5 @@ CRUD
 npm install
 4. Para lanzar el servidor con nodemon en la terminal usa el siguiente comando
 npm run dev
+
+al momento de realizar la base de datos la herramienta no estaba instalada se tuvieron que usar otros recursos. Si pudiera realizar nuevamente la prueba desde mi pc y con mi recurso lo intentaria nuevamente, muchas gracias
