@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <fieldset class="form-group col-sm-11"></fieldset>
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-primary" [routerLink]="['/plato/agregar']">+</a>
+          </fieldset>
+        </form>
+        <br>
+        <table class="table table-striped">
+          <thead>
+            <tr class="row">
+              <th class="col-sm-2"> ID </th>
+              <th class="col-sm-4"> NOMBRE </th>
+              <th class="col-sm-4"> DESCRIPCION </th>
+              <th class="col-sm-2"> ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let plato of platos | async" class="row">
+              <td class="col-sm-2"><i>{{  plato.id_plato }}</i></td>
+              <td class="col-sm-4"><i>{{  plato.nombre}}</i></td>
+              <td class="col-sm-4"><i>{{ plato.descripcion }}</i></td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-info" [routerLink]="['/platos/editar/', platos.id_plato]">Editar</a>
+                </fieldset>
+              </td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-danger" (click)="borrarPlato(plato.id_plato)">Borrar</a>
+                </fieldset>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
